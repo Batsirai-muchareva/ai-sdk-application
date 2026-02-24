@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+The messages variable contains a history of the conversation between you and the chatbot and provides the chatbot with the necessary context to make the next generation. The messages are of UIMessage type, which are designed for use in application UI - they contain the entire message history and associated metadata like timestamps.
 
-## Getting Started
+### Choosing a Provider
+- The AI SDK supports dozens of model providers through
+- This quickstart uses the Vercel AI Gateway provider, which is the default global provider. This means you can access models using a simple string in the model configuration:
+- Gateway --> model: "anthropic/claude-sonnet-4.5";
+- Provider --> model: anthropic("claude-sonnet-4-5");
 
-First, run the development server:
+Now that you have a Route Handler that can query an LLM, it's time to setup your frontend. The AI SDK's UI package abstracts the complexity of a chat interface into one hook, useChat.
+This page utilizes the useChat hook, which will, by default, use the POST API route you created earlier (/api/chat
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Workflows 
+- Agents
+- Custom Script
+- CLI
+ All of these to help work faster and smarter 
+- Vercel AI SDK toolkit that's solves pain points 
